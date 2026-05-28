@@ -1,0 +1,5 @@
+if(EXISTS "/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/FileMoveTests[1]_tests.cmake")
+  include("/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/FileMoveTests[1]_tests.cmake")
+else()
+  add_test(FileMoveTests_NOT_BUILT FileMoveTests_NOT_BUILT)
+endif()

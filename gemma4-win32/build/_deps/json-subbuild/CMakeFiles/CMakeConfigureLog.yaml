@@ -1,0 +1,98 @@
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineSystem.cmake:12 (find_program)"
+      - "CMakeLists.txt:16 (project)"
+    mode: "program"
+    variable: "CMAKE_UNAME"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "uname"
+    candidate_directories:
+      - "/home/brad/.opencode/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/usr/lib/wsl/lib/"
+      - "/mnt/c/WINDOWS/system32/"
+      - "/mnt/c/WINDOWS/"
+      - "/mnt/c/WINDOWS/System32/Wbem/"
+      - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+      - "/mnt/c/WINDOWS/System32/OpenSSH/"
+      - "/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "/mnt/c/Program Files/dotnet/"
+      - "/mnt/c/Program Files/nodejs/"
+      - "/mnt/c/Program Files/PowerShell/7/"
+      - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "/mnt/c/Users/brad/.local/bin/"
+      - "/mnt/c/Users/brad/AppData/Local/Microsoft/WindowsApps/"
+      - "/mnt/c/Users/brad/.lmstudio/bin/"
+      - "/mnt/c/Users/brad/AppData/Roaming/npm/"
+      - "/mnt/c/Users/brad/AppData/Local/Programs/Ollama/"
+      - "/mnt/c/Users/brad/AppData/Local/Python/bin/"
+      - "/mnt/c/Users/brad/.dotnet/tools/"
+      - "/snap/bin/"
+      - "/home/brad/.dotnet/tools/"
+    searched_directories:
+      - "/home/brad/.opencode/bin/uname"
+      - "/usr/local/sbin/uname"
+      - "/usr/local/bin/uname"
+      - "/usr/sbin/uname"
+    found: "/usr/bin/uname"
+    search_context:
+      ENV{PATH}:
+        - "/home/brad/.opencode/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/usr/lib/wsl/lib"
+        - "/mnt/c/WINDOWS/system32"
+        - "/mnt/c/WINDOWS"
+        - "/mnt/c/WINDOWS/System32/Wbem"
+        - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+        - "/mnt/c/WINDOWS/System32/OpenSSH/"
+        - "/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR"
+        - "/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common"
+        - "/mnt/c/Program Files/dotnet/"
+        - "/mnt/c/Program Files/nodejs/"
+        - "/mnt/c/Program Files/PowerShell/7/"
+        - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Users/brad/.local/bin"
+        - "/mnt/c/Users/brad/AppData/Local/Microsoft/WindowsApps"
+        - "/mnt/c/Users/brad/.lmstudio/bin"
+        - "/mnt/c/Users/brad/AppData/Roaming/npm"
+        - "/mnt/c/Users/brad/AppData/Local/Programs/Ollama"
+        - "/mnt/c/Users/brad/AppData/Local/Python/bin"
+        - "/mnt/c/Users/brad/.dotnet/tools"
+        - "/snap/bin"
+        - "/home/brad/.dotnet/tools"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineSystem.cmake:212 (message)"
+      - "CMakeLists.txt:16 (project)"
+    message: |
+      The system is: Linux - 6.6.114.1-microsoft-standard-WSL2 - x86_64
+...

@@ -1,0 +1,11 @@
+{
+	"InstallScripts" : 
+	[
+		"/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/cmake_install.cmake",
+		"/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/_deps/json-build/cmake_install.cmake",
+		"/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/_deps/googletest-build/cmake_install.cmake",
+		"/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/_deps/googletest-build/googlemock/cmake_install.cmake",
+		"/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/_deps/googletest-build/googletest/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

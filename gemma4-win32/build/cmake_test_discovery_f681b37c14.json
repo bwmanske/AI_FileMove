@@ -1,0 +1,37 @@
+{
+  "tests": 5,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "CommandLineTest",
+      "tests": 5,
+      "testsuite": [
+        {
+          "name": "ValidOptions",
+          "file": "\/mnt\/c\/Users\/brad\/Documents\/OpenCode\/Gemma4-FileMove\/gemma4-win32\/tests\/test_main.cpp",
+          "line": 20
+        },
+        {
+          "name": "CaseInsensitivity",
+          "file": "\/mnt\/c\/Users\/brad\/Documents\/OpenCode\/Gemma4-FileMove\/gemma4-win32\/tests\/test_main.cpp",
+          "line": 31
+        },
+        {
+          "name": "InvalidValueThrows",
+          "file": "\/mnt\/c\/Users\/brad\/Documents\/OpenCode\/Gemma4-FileMove\/gemma4-win32\/tests\/test_main.cpp",
+          "line": 40
+        },
+        {
+          "name": "MissingValueThrows",
+          "file": "\/mnt\/c\/Users\/brad\/Documents\/OpenCode\/Gemma4-FileMove\/gemma4-win32\/tests\/test_main.cpp",
+          "line": 47
+        },
+        {
+          "name": "UnknownOptionThrows",
+          "file": "\/mnt\/c\/Users\/brad\/Documents\/OpenCode\/Gemma4-FileMove\/gemma4-win32\/tests\/test_main.cpp",
+          "line": 54
+        }
+      ]
+    }
+  ]
+}
