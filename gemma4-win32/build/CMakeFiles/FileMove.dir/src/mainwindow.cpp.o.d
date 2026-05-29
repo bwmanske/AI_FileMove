@@ -213,4 +213,6 @@ CMakeFiles/FileMove.dir/src/mainwindow.cpp.o: \
  /mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/include/about_window.hpp \
  /mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/include/settings_window.hpp \
  /mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/include/shutdown_dialog.hpp \
+ /mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/src/clipboard_handler.hpp \
+ /mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/include/filemove.hpp \
  /usr/include/c++/15/chrono

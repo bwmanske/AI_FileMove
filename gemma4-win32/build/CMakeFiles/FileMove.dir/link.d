@@ -14,6 +14,7 @@ FileMove: \
   CMakeFiles/FileMove.dir/src/search_dialog.cpp.o \
   CMakeFiles/FileMove.dir/src/shutdown_dialog.cpp.o \
   CMakeFiles/FileMove.dir/src/logger.cpp.o \
+  CMakeFiles/FileMove.dir/src/clipboard_handler.cpp.o \
   /usr/lib/gcc/x86_64-linux-gnu/15/libstdc++.so \
   /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/libm.so \
   /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/libm.so \
@@ -72,6 +73,8 @@ CMakeFiles/FileMove.dir/src/search_dialog.cpp.o:
 CMakeFiles/FileMove.dir/src/shutdown_dialog.cpp.o:
 
 CMakeFiles/FileMove.dir/src/logger.cpp.o:
+
+CMakeFiles/FileMove.dir/src/clipboard_handler.cpp.o:
 
 /usr/lib/gcc/x86_64-linux-gnu/15/libstdc++.so:
 

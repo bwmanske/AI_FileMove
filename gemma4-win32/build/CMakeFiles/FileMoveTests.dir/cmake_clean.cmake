@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/FileMoveTests.dir/link.d"
   "CMakeFiles/FileMoveTests.dir/src/cli_parser.cpp.o"
   "CMakeFiles/FileMoveTests.dir/src/cli_parser.cpp.o.d"
+  "CMakeFiles/FileMoveTests.dir/src/clipboard_handler.cpp.o"
+  "CMakeFiles/FileMoveTests.dir/src/clipboard_handler.cpp.o.d"
   "CMakeFiles/FileMoveTests.dir/src/storage_manager.cpp.o"
   "CMakeFiles/FileMoveTests.dir/src/storage_manager.cpp.o.d"
   "CMakeFiles/FileMoveTests.dir/tests/test_main.cpp.o"

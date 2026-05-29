@@ -300,6 +300,33 @@ src/cli_parser.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileMoveTests.dir/build.make CMakeFiles/FileMoveTests.dir/src/cli_parser.cpp.s
 .PHONY : src/cli_parser.cpp.s
 
+src/clipboard_handler.o: src/clipboard_handler.cpp.o
+.PHONY : src/clipboard_handler.o
+
+# target to build an object file
+src/clipboard_handler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileMove.dir/build.make CMakeFiles/FileMove.dir/src/clipboard_handler.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileMoveTests.dir/build.make CMakeFiles/FileMoveTests.dir/src/clipboard_handler.cpp.o
+.PHONY : src/clipboard_handler.cpp.o
+
+src/clipboard_handler.i: src/clipboard_handler.cpp.i
+.PHONY : src/clipboard_handler.i
+
+# target to preprocess a source file
+src/clipboard_handler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileMove.dir/build.make CMakeFiles/FileMove.dir/src/clipboard_handler.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileMoveTests.dir/build.make CMakeFiles/FileMoveTests.dir/src/clipboard_handler.cpp.i
+.PHONY : src/clipboard_handler.cpp.i
+
+src/clipboard_handler.s: src/clipboard_handler.cpp.s
+.PHONY : src/clipboard_handler.s
+
+# target to generate assembly for a file
+src/clipboard_handler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileMove.dir/build.make CMakeFiles/FileMove.dir/src/clipboard_handler.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileMoveTests.dir/build.make CMakeFiles/FileMoveTests.dir/src/clipboard_handler.cpp.s
+.PHONY : src/clipboard_handler.cpp.s
+
 src/group_dialog.o: src/group_dialog.cpp.o
 .PHONY : src/group_dialog.o
 
@@ -592,6 +619,9 @@ help:
 	@echo "... src/cli_parser.o"
 	@echo "... src/cli_parser.i"
 	@echo "... src/cli_parser.s"
+	@echo "... src/clipboard_handler.o"
+	@echo "... src/clipboard_handler.i"
+	@echo "... src/clipboard_handler.s"
 	@echo "... src/group_dialog.o"
 	@echo "... src/group_dialog.i"
 	@echo "... src/group_dialog.s"

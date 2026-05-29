@@ -5,6 +5,7 @@ FileMoveTests: \
   CMakeFiles/FileMoveTests.dir/tests/test_main.cpp.o \
   CMakeFiles/FileMoveTests.dir/src/cli_parser.cpp.o \
   CMakeFiles/FileMoveTests.dir/src/storage_manager.cpp.o \
+  CMakeFiles/FileMoveTests.dir/src/clipboard_handler.cpp.o \
   lib/libgtest_main.a \
   lib/libgtest.a \
   /usr/lib/gcc/x86_64-linux-gnu/15/libstdc++.so \
@@ -46,6 +47,8 @@ CMakeFiles/FileMoveTests.dir/tests/test_main.cpp.o:
 CMakeFiles/FileMoveTests.dir/src/cli_parser.cpp.o:
 
 CMakeFiles/FileMoveTests.dir/src/storage_manager.cpp.o:
+
+CMakeFiles/FileMoveTests.dir/src/clipboard_handler.cpp.o:
 
 lib/libgtest_main.a:
 

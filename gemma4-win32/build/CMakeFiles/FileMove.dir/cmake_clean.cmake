@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/FileMove.dir/src/about_window.cpp.o.d"
   "CMakeFiles/FileMove.dir/src/cli_parser.cpp.o"
   "CMakeFiles/FileMove.dir/src/cli_parser.cpp.o.d"
+  "CMakeFiles/FileMove.dir/src/clipboard_handler.cpp.o"
+  "CMakeFiles/FileMove.dir/src/clipboard_handler.cpp.o.d"
   "CMakeFiles/FileMove.dir/src/group_dialog.cpp.o"
   "CMakeFiles/FileMove.dir/src/group_dialog.cpp.o.d"
   "CMakeFiles/FileMove.dir/src/logger.cpp.o"

@@ -180,12 +180,12 @@ _deps/json-build/clean:
 CMakeFiles/FileMove.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileMove.dir/build.make CMakeFiles/FileMove.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileMove.dir/build.make CMakeFiles/FileMove.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13 "Built target FileMove"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14 "Built target FileMove"
 .PHONY : CMakeFiles/FileMove.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/FileMove.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/CMakeFiles 13
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/CMakeFiles 14
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/FileMove.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/CMakeFiles 0
 .PHONY : CMakeFiles/FileMove.dir/rule
@@ -197,7 +197,7 @@ FileMove: CMakeFiles/FileMove.dir/rule
 # codegen rule for target.
 CMakeFiles/FileMove.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileMove.dir/build.make CMakeFiles/FileMove.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13 "Finished codegen for target FileMove"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14 "Finished codegen for target FileMove"
 .PHONY : CMakeFiles/FileMove.dir/codegen
 
 # clean rule for target.
@@ -213,12 +213,12 @@ CMakeFiles/FileMoveTests.dir/all: _deps/googletest-build/googletest/CMakeFiles/g
 CMakeFiles/FileMoveTests.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileMoveTests.dir/build.make CMakeFiles/FileMoveTests.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileMoveTests.dir/build.make CMakeFiles/FileMoveTests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/CMakeFiles --progress-num=14,15,16,17 "Built target FileMoveTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/CMakeFiles --progress-num=15,16,17,18,19 "Built target FileMoveTests"
 .PHONY : CMakeFiles/FileMoveTests.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/FileMoveTests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/FileMoveTests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/CMakeFiles 0
 .PHONY : CMakeFiles/FileMoveTests.dir/rule
@@ -230,7 +230,7 @@ FileMoveTests: CMakeFiles/FileMoveTests.dir/rule
 # codegen rule for target.
 CMakeFiles/FileMoveTests.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileMoveTests.dir/build.make CMakeFiles/FileMoveTests.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/CMakeFiles --progress-num=14,15,16,17 "Finished codegen for target FileMoveTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/CMakeFiles --progress-num=15,16,17,18,19 "Finished codegen for target FileMoveTests"
 .PHONY : CMakeFiles/FileMoveTests.dir/codegen
 
 # clean rule for target.
@@ -245,7 +245,7 @@ CMakeFiles/FileMoveTests.dir/clean:
 _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/CMakeFiles --progress-num=18,19 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/CMakeFiles --progress-num=20,21 "Built target gmock"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -262,7 +262,7 @@ gmock: _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/rule
 # codegen rule for target.
 _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/CMakeFiles --progress-num=18,19 "Finished codegen for target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/CMakeFiles --progress-num=20,21 "Finished codegen for target gmock"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/codegen
 
 # clean rule for target.
@@ -278,7 +278,7 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletes
 _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/CMakeFiles --progress-num=20,21 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/CMakeFiles --progress-num=22,23 "Built target gmock_main"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -295,7 +295,7 @@ gmock_main: _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/rule
 # codegen rule for target.
 _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/CMakeFiles --progress-num=20,21 "Finished codegen for target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/CMakeFiles --progress-num=22,23 "Finished codegen for target gmock_main"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/codegen
 
 # clean rule for target.
@@ -310,7 +310,7 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/clean:
 _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/CMakeFiles --progress-num=22,23 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/CMakeFiles --progress-num=24,25 "Built target gtest"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -327,7 +327,7 @@ gtest: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/rule
 # codegen rule for target.
 _deps/googletest-build/googletest/CMakeFiles/gtest.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/CMakeFiles --progress-num=22,23 "Finished codegen for target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/CMakeFiles --progress-num=24,25 "Finished codegen for target gtest"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest.dir/codegen
 
 # clean rule for target.
@@ -342,7 +342,7 @@ _deps/googletest-build/googletest/CMakeFiles/gtest.dir/clean:
 _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/CMakeFiles --progress-num=24,25 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/CMakeFiles --progress-num=26,27 "Built target gtest_main"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -359,7 +359,7 @@ gtest_main: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/rule
 # codegen rule for target.
 _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/CMakeFiles --progress-num=24,25 "Finished codegen for target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/CMakeFiles --progress-num=26,27 "Finished codegen for target gtest_main"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/codegen
 
 # clean rule for target.

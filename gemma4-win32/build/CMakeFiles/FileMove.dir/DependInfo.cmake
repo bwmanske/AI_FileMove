@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/src/about_window.cpp" "CMakeFiles/FileMove.dir/src/about_window.cpp.o" "gcc" "CMakeFiles/FileMove.dir/src/about_window.cpp.o.d"
   "/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/src/cli_parser.cpp" "CMakeFiles/FileMove.dir/src/cli_parser.cpp.o" "gcc" "CMakeFiles/FileMove.dir/src/cli_parser.cpp.o.d"
+  "/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/src/clipboard_handler.cpp" "CMakeFiles/FileMove.dir/src/clipboard_handler.cpp.o" "gcc" "CMakeFiles/FileMove.dir/src/clipboard_handler.cpp.o.d"
   "/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/src/group_dialog.cpp" "CMakeFiles/FileMove.dir/src/group_dialog.cpp.o" "gcc" "CMakeFiles/FileMove.dir/src/group_dialog.cpp.o.d"
   "/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/src/logger.cpp" "CMakeFiles/FileMove.dir/src/logger.cpp.o" "gcc" "CMakeFiles/FileMove.dir/src/logger.cpp.o.d"
   "/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/src/main.cpp" "CMakeFiles/FileMove.dir/src/main.cpp.o" "gcc" "CMakeFiles/FileMove.dir/src/main.cpp.o.d"

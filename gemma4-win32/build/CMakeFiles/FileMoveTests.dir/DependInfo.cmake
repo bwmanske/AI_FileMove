@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/src/cli_parser.cpp" "CMakeFiles/FileMoveTests.dir/src/cli_parser.cpp.o" "gcc" "CMakeFiles/FileMoveTests.dir/src/cli_parser.cpp.o.d"
+  "/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/src/clipboard_handler.cpp" "CMakeFiles/FileMoveTests.dir/src/clipboard_handler.cpp.o" "gcc" "CMakeFiles/FileMoveTests.dir/src/clipboard_handler.cpp.o.d"
   "/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/src/storage_manager.cpp" "CMakeFiles/FileMoveTests.dir/src/storage_manager.cpp.o" "gcc" "CMakeFiles/FileMoveTests.dir/src/storage_manager.cpp.o.d"
   "/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/tests/test_main.cpp" "CMakeFiles/FileMoveTests.dir/tests/test_main.cpp.o" "gcc" "CMakeFiles/FileMoveTests.dir/tests/test_main.cpp.o.d"
   "" "FileMoveTests" "gcc" "CMakeFiles/FileMoveTests.dir/link.d"

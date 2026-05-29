@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/include -I/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/_deps/json-src/include -isystem /mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/_deps/googletest-src/googletest/include -isystem /mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/_deps/googletest-src/googletest
+CXX_INCLUDES = -I/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/include -I/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/src -I/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/_deps/json-src/include -isystem /mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/_deps/googletest-src/googletest/include -isystem /mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/_deps/googletest-src/googletest
 
 CXX_FLAGS = -std=gnu++17
 

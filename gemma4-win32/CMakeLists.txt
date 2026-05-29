@@ -30,7 +30,7 @@ add_executable(FileMove
     src/cli_parser.cpp 
     src/storage_manager.cpp
     src/move_worker.cpp
-    src/mainwindow.cpp
+    src/mainwindow.cpp 
     src/settings_window.cpp
     src/status_window.cpp
     src/about_window.cpp
@@ -38,7 +38,9 @@ add_executable(FileMove
     src/search_dialog.cpp
     src/shutdown_dialog.cpp
     src/logger.cpp
+    src/clipboard_handler.cpp
 )
+
 
 target_compile_definitions(FileMove PRIVATE 
     FILEMOVE_VERSION="1.0.4"
@@ -57,7 +59,9 @@ add_executable(FileMoveTests
     tests/test_main.cpp 
     src/cli_parser.cpp 
     src/storage_manager.cpp
+    src/clipboard_handler.cpp
 )
+target_include_directories(FileMoveTests PRIVATE src include)
 target_link_libraries(FileMoveTests PRIVATE GTest::gtest_main nlohmann_json::nlohmann_json)
 include(GoogleTest)
 gtest_discover_tests(FileMoveTests)

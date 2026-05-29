@@ -3,6 +3,7 @@
 #include "about_window.hpp"
 #include "settings_window.hpp"
 #include "shutdown_dialog.hpp"
+#include "clipboard_handler.hpp"
 #include <string>
 #include <chrono>
 #include <iomanip>
@@ -193,40 +194,32 @@ LRESULT CALLBACK MainWindow::WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPA
                                             UINT fileCount = DragQueryFileW(hDrop, 0xFFFFFFFF, NULL, 0);
                                             std::vector<PendingMoveEntry> batch;
 
-                                            auto now = std::chrono::system_clock::now();
-                                            auto in_time_t = std::chrono::system_clock::to_time_t(now);
-                                            std::stringstream ss;
-                                            ss << std::put_time(std::localtime(&in_time_t), "%Y-%m-%d %H:%M:%S");
-                                            std::string timestamp = ss.str();
+                                             auto now = std::chrono::system_clock::now();
+                                             auto in_time_t = std::chrono::system_clock::to_time_t(now);
+                                             std::stringstream ss;
+                                             ss << std::put_time(std::localtime(&in_time_t), "%Y-%m-%d %H:%M:%S");
+                                             std::string timestamp = ss.str();
 
-                                            for (UINT i = 0; i < fileCount; ++i) {
-                                                wchar_t filePathBuffer[MAX_PATH];
-                                                DragQueryFileW(hDrop, i, filePathBuffer, MAX_PATH);
-                                                std::filesystem::path filePath(filePathBuffer);
+                                             std::vector<std::filesystem::path> paths;
+                                             for (UINT i = 0; i < fileCount; ++i) {
+                                                 wchar_t filePathBuffer[MAX_PATH];
+                                                 DragQueryFileW(hDrop, i, filePathBuffer, MAX_PATH);
+                                                 paths.push_back(filePathBuffer);
+                                             }
 
-                                                PendingMoveEntry entry;
-                                                entry.id = "clip-" + std::to_string(i);
-                                                entry.groupId = selectedGroup->id;
-                                                entry.sourceFilePath = filePath;
-                                                 entry.relativePath = filePath.filename();
-                                                entry.destinationDirectories = selectedGroup->destinationPaths;
-                                                entry.debugTransferMode = pThis->m_options.debugMode;
-                                                entry.queuedAt = timestamp;
-                                                entry.status = MoveStatus::Queued;
+                                             auto batch = ClipboardHandler::CreateEntriesFromPaths(paths, *selectedGroup, pThis->m_options.debugMode, timestamp, "clip");
 
-                                                batch.push_back(entry);
-                                            }
+                                             if (!batch.empty()) {
+                                                 auto preparedBatch = pThis->m_worker.PrepareBatch(batch);
+                                                 if (preparedBatch) {
+                                                     pThis->m_worker.QueueBatch(*preparedBatch);
+                                                 } else {
+                                                     MessageBoxW(pThis->m_hwnd, L"Validation failed for batch.", L"Error", MB_OK | MB_ICONERROR);
+                                                 }
+                                             }
+                                         }
+                                         DragFinish(hDrop);
 
-                                            if (!batch.empty()) {
-                                                auto preparedBatch = pThis->m_worker.PrepareBatch(batch);
-                                                if (preparedBatch) {
-                                                    pThis->m_worker.QueueBatch(*preparedBatch);
-                                                } else {
-                                                    MessageBoxW(pThis->m_hwnd, L"Validation failed for batch.", L"Error", MB_OK | MB_ICONERROR);
-                                                }
-                                            }
-                                        }
-                                        DragFinish(hDrop);
                                     }
                                     CloseClipboard();
                                 }
@@ -295,42 +288,32 @@ LRESULT CALLBACK MainWindow::WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPA
                             UINT fileCount = DragQueryFileW(hDrop, 0xFFFFFFFF, NULL, 0);
                             std::vector<PendingMoveEntry> batch;
 
-                            auto now = std::chrono::system_clock::now();
-                            auto in_time_t = std::chrono::system_clock::to_time_t(now);
-                            std::stringstream ss;
-                            ss << std::put_time(std::localtime(&in_time_t), "%Y-%m-%d %H:%M:%S");
-                            std::string timestamp = ss.str();
+                                             auto now = std::chrono::system_clock::now();
+                                             auto in_time_t = std::chrono::system_clock::to_time_t(now);
+                                             std::stringstream ss;
+                                             ss << std::put_time(std::localtime(&in_time_t), "%Y-%m-%d %H:%M:%S");
+                                             std::string timestamp = ss.str();
 
-                            for (UINT i = 0; i < fileCount; ++i) {
-                                wchar_t filePathBuffer[MAX_PATH];
-                                DragQueryFileW(hDrop, i, filePathBuffer, MAX_PATH);
-                                std::filesystem::path filePath(filePathBuffer);
+                                             std::vector<std::filesystem::path> paths;
+                                             for (UINT i = 0; i < fileCount; ++i) {
+                                                 wchar_t filePathBuffer[MAX_PATH];
+                                                 DragQueryFileW(hDrop, i, filePathBuffer, MAX_PATH);
+                                                 paths.push_back(filePathBuffer);
+                                             }
 
-                                PendingMoveEntry entry;
-                                entry.id = "drop-" + std::to_string(i);
-                                entry.groupId = selectedGroup->id;
-                                entry.sourceFilePath = filePath;
-                                                 entry.relativePath = filePath.filename();
-                                entry.destinationDirectories = selectedGroup->destinationPaths;
-                                entry.debugTransferMode = pThis->m_options.debugMode;
-                                entry.queuedAt = timestamp;
-                                entry.status = MoveStatus::Queued;
+                                             auto batch = ClipboardHandler::CreateEntriesFromPaths(paths, *selectedGroup, pThis->m_options.debugMode, timestamp, "drop");
 
-                                batch.push_back(entry);
-                            }
+                                             if (!batch.empty()) {
+                                                 auto preparedBatch = pThis->m_worker.PrepareBatch(batch);
+                                                 if (preparedBatch) {
+                                                     pThis->m_worker.QueueBatch(*preparedBatch);
+                                                 } else {
+                                                     MessageBoxW(pThis->m_hwnd, L"Validation failed for batch.", L"Error", MB_OK | MB_ICONERROR);
+                                                 }
+                                             }
+                                         }
+                                         DragFinish(hDrop);
 
-                            if (!batch.empty()) {
-                                auto preparedBatch = pThis->m_worker.PrepareBatch(batch);
-                                if (preparedBatch) {
-                                    pThis->m_worker.QueueBatch(*preparedBatch);
-                                } else {
-                                    MessageBoxW(pThis->m_hwnd, L"Validation failed for batch.", L"Error", MB_OK | MB_ICONERROR);
-                                }
-                            }
-                        }
-                    }
-                }
-                DragFinish(hDrop);
                 return 0;
             }
             case WM_NOTIFY: {

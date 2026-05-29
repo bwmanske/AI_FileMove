@@ -114,11 +114,26 @@ CMakeFiles/FileMoveTests.dir/src/storage_manager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FileMoveTests.dir/src/storage_manager.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/src/storage_manager.cpp -o CMakeFiles/FileMoveTests.dir/src/storage_manager.cpp.s
 
+CMakeFiles/FileMoveTests.dir/src/clipboard_handler.cpp.o: CMakeFiles/FileMoveTests.dir/flags.make
+CMakeFiles/FileMoveTests.dir/src/clipboard_handler.cpp.o: /mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/src/clipboard_handler.cpp
+CMakeFiles/FileMoveTests.dir/src/clipboard_handler.cpp.o: CMakeFiles/FileMoveTests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/FileMoveTests.dir/src/clipboard_handler.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FileMoveTests.dir/src/clipboard_handler.cpp.o -MF CMakeFiles/FileMoveTests.dir/src/clipboard_handler.cpp.o.d -o CMakeFiles/FileMoveTests.dir/src/clipboard_handler.cpp.o -c /mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/src/clipboard_handler.cpp
+
+CMakeFiles/FileMoveTests.dir/src/clipboard_handler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FileMoveTests.dir/src/clipboard_handler.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/src/clipboard_handler.cpp > CMakeFiles/FileMoveTests.dir/src/clipboard_handler.cpp.i
+
+CMakeFiles/FileMoveTests.dir/src/clipboard_handler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FileMoveTests.dir/src/clipboard_handler.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/src/clipboard_handler.cpp -o CMakeFiles/FileMoveTests.dir/src/clipboard_handler.cpp.s
+
 # Object files for target FileMoveTests
 FileMoveTests_OBJECTS = \
 "CMakeFiles/FileMoveTests.dir/tests/test_main.cpp.o" \
 "CMakeFiles/FileMoveTests.dir/src/cli_parser.cpp.o" \
-"CMakeFiles/FileMoveTests.dir/src/storage_manager.cpp.o"
+"CMakeFiles/FileMoveTests.dir/src/storage_manager.cpp.o" \
+"CMakeFiles/FileMoveTests.dir/src/clipboard_handler.cpp.o"
 
 # External object files for target FileMoveTests
 FileMoveTests_EXTERNAL_OBJECTS =
@@ -126,12 +141,13 @@ FileMoveTests_EXTERNAL_OBJECTS =
 FileMoveTests: CMakeFiles/FileMoveTests.dir/tests/test_main.cpp.o
 FileMoveTests: CMakeFiles/FileMoveTests.dir/src/cli_parser.cpp.o
 FileMoveTests: CMakeFiles/FileMoveTests.dir/src/storage_manager.cpp.o
+FileMoveTests: CMakeFiles/FileMoveTests.dir/src/clipboard_handler.cpp.o
 FileMoveTests: CMakeFiles/FileMoveTests.dir/build.make
 FileMoveTests: CMakeFiles/FileMoveTests.dir/compiler_depend.ts
 FileMoveTests: lib/libgtest_main.a
 FileMoveTests: lib/libgtest.a
 FileMoveTests: CMakeFiles/FileMoveTests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable FileMoveTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable FileMoveTests"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/FileMoveTests.dir/link.txt --verbose=$(VERBOSE)
 	/usr/bin/cmake -D TEST_TARGET=FileMoveTests -D TEST_EXECUTABLE=/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/FileMoveTests -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=FileMoveTests_TESTS -D CTEST_FILE=/mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/build/FileMoveTests[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_DISCOVERY_EXTRA_ARGS= -D TEST_XML_OUTPUT_DIR= -P /usr/share/cmake-4.2/Modules/GoogleTestAddTests.cmake
 

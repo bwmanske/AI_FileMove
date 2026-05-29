@@ -1,7 +1,9 @@
 #include <gtest/gtest.h>
 #include "filemove.hpp"
+#include "clipboard_handler.hpp"
 #include <vector>
 #include <string>
+#include <filesystem>
 
 class CommandLineTest : public ::testing::Test {
 protected:
@@ -56,6 +58,41 @@ TEST_F(CommandLineTest, UnknownOptionThrows) {
     int argc = static_cast<int>(argv.size());
 
     EXPECT_THROW(FileMove::CommandLineParser::parse(argc, argv.data()), FileMove::ParseException);
+}
+
+class ClipboardHandlerTest : public ::testing::Test {
+protected:
+    FileMove::Group testGroup;
+
+    void SetUp() override {
+        testGroup.id = "group-1";
+        testGroup.name = "TestGroup";
+        testGroup.destinationPaths = {"/tmp/dest"};
+    }
+};
+
+TEST_F(ClipboardHandlerTest, CreateEntries_ValidPaths) {
+    std::vector<std::filesystem::path> paths = {"/tmp/file1.txt", "/tmp/file2.txt"};
+    std::string timestamp = "2024-01-01 12:00:00";
+    
+    auto entries = FileMove::ClipboardHandler::CreateEntriesFromPaths(paths, testGroup, FileMove::DebugMode::None, timestamp, "clip");
+
+    ASSERT_EQ(entries.size(), 2);
+    EXPECT_EQ(entries[0].id, "clip-0");
+    EXPECT_EQ(entries[0].groupId, "group-1");
+    EXPECT_EQ(entries[0].sourceFilePath.string(), "/tmp/file1.txt");
+    EXPECT_EQ(entries[0].relativePath.string(), "file1.txt");
+    EXPECT_EQ(entries[0].destinationDirectories[0].string(), "/tmp/dest");
+    EXPECT_EQ(entries[0].queuedAt, timestamp);
+
+    EXPECT_EQ(entries[1].id, "clip-1");
+    EXPECT_EQ(entries[1].sourceFilePath.string(), "/tmp/file2.txt");
+}
+
+TEST_F(ClipboardHandlerTest, CreateEntries_EmptyPaths) {
+    std::vector<std::filesystem::path> paths = {};
+    auto entries = FileMove::ClipboardHandler::CreateEntriesFromPaths(paths, testGroup, FileMove::DebugMode::None, "timestamp");
+    EXPECT_TRUE(entries.empty());
 }
 
 int main(int argc, char **argv) {

@@ -1,5 +1,5 @@
 {
-  "tests": 5,
+  "tests": 7,
   "name": "AllTests",
   "testsuites": [
     {
@@ -9,27 +9,43 @@
         {
           "name": "ValidOptions",
           "file": "\/mnt\/c\/Users\/brad\/Documents\/OpenCode\/Gemma4-FileMove\/gemma4-win32\/tests\/test_main.cpp",
-          "line": 20
+          "line": 22
         },
         {
           "name": "CaseInsensitivity",
           "file": "\/mnt\/c\/Users\/brad\/Documents\/OpenCode\/Gemma4-FileMove\/gemma4-win32\/tests\/test_main.cpp",
-          "line": 31
+          "line": 33
         },
         {
           "name": "InvalidValueThrows",
           "file": "\/mnt\/c\/Users\/brad\/Documents\/OpenCode\/Gemma4-FileMove\/gemma4-win32\/tests\/test_main.cpp",
-          "line": 40
+          "line": 42
         },
         {
           "name": "MissingValueThrows",
           "file": "\/mnt\/c\/Users\/brad\/Documents\/OpenCode\/Gemma4-FileMove\/gemma4-win32\/tests\/test_main.cpp",
-          "line": 47
+          "line": 49
         },
         {
           "name": "UnknownOptionThrows",
           "file": "\/mnt\/c\/Users\/brad\/Documents\/OpenCode\/Gemma4-FileMove\/gemma4-win32\/tests\/test_main.cpp",
-          "line": 54
+          "line": 56
+        }
+      ]
+    },
+    {
+      "name": "ClipboardHandlerTest",
+      "tests": 2,
+      "testsuite": [
+        {
+          "name": "CreateEntries_ValidPaths",
+          "file": "\/mnt\/c\/Users\/brad\/Documents\/OpenCode\/Gemma4-FileMove\/gemma4-win32\/tests\/test_main.cpp",
+          "line": 74
+        },
+        {
+          "name": "CreateEntries_EmptyPaths",
+          "file": "\/mnt\/c\/Users\/brad\/Documents\/OpenCode\/Gemma4-FileMove\/gemma4-win32\/tests\/test_main.cpp",
+          "line": 92
         }
       ]
     }

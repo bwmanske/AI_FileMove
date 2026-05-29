@@ -294,4 +294,5 @@ CMakeFiles/FileMoveTests.dir/tests/test_main.cpp.o: \
  /usr/include/c++/15/fstream \
  /usr/include/x86_64-linux-gnu/c++/15/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/15/bits/c++io.h \
- /usr/include/c++/15/bits/fstream.tcc
+ /usr/include/c++/15/bits/fstream.tcc \
+ /mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/src/clipboard_handler.hpp
