@@ -69,9 +69,8 @@ CommandLineOptions CommandLineParser::parse(int argc, char* argv[]) {
                 throw ParseException("Unknown option: " + arg);
             }
         } else {
-            // The spec says recognize an option only when preceded by / or -
-            // If it's not, we ignore it as a potential filename/text unless we are in error mode.
-            // For now, let's just skip unknown non-option args.
+            // If it's not an option, treat it as a file for headless testing
+            options.testFiles.push_back(arg);
         }
     }
 

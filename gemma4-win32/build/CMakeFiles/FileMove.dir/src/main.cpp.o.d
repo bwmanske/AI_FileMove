@@ -210,4 +210,5 @@ CMakeFiles/FileMove.dir/src/main.cpp.o: \
  /mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/include/mainwindow.hpp \
  /mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/include/filemove.hpp \
  /mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/include/logger.hpp \
- /usr/include/c++/15/iostream /usr/include/c++/15/chrono
+ /usr/include/c++/15/iostream /usr/include/c++/15/chrono \
+ /mnt/c/Users/brad/Documents/OpenCode/Gemma4-FileMove/gemma4-win32/include/storage_manager.hpp

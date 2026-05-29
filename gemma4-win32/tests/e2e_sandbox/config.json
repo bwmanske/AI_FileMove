@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "lastSelectedGroupId": "",
+  "sortMode": 0,
+  "placementMode": 0,
+  "windowWidth": 400,
+  "windowHeight": 500,
+  "windowLeft": 100,
+  "windowTop": 100,
+  "enableDirectoryMoves": true,
+  "enableSidecarFiles": true,
+  "hideQueuedSourceFiles": false,
+  "groups": [
+    {
+      "id": "group-123",
+      "name": "groupA",
+      "destinationPaths": ["dest/groupA/dest1"],
+      "defaultAction": "",
+      "createdAt": "2024-01-01 00:00:00",
+      "updatedAt": "2024-01-01 00:00:00",
+      "lastUsedAt": "2024-01-01 00:00:00"
+    }
+  ]
+}

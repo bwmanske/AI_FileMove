@@ -46,8 +46,8 @@
 - [x] Full Explorer integration (Drag & Drop, Clipboard).
 
 #### Phase 7: Feature Implementation
-- [suspended] UI density audit.
-- [suspended] Comprehensive end-to-end testing.
+- [x] UI density audit.
+- [ ] Comprehensive end-to-end testing.
 
 ---
 
@@ -76,6 +76,6 @@
 - [x] Expand Directory support in Move Engine (recursive expansion).
 
 #### Phase 4: Refinement & QA
-- [ ] UI density audit.
+- [x] UI density audit.
 - [ ] Comprehensive end-to-end testing.
 

@@ -79,8 +79,106 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
     return 0;
 }
 #else
+#include "storage_manager.hpp"
+
 int main(int argc, char* argv[]) {
-    std::cout << "FileMove (Linux/Wine mode) starting..." << std::endl;
+    std::cout << "FileMove (Linux mode) starting..." << std::endl;
+
+    FileMove::CommandLineOptions options;
+    try {
+        options = FileMove::CommandLineParser::parse(argc, argv);
+    } catch (const FileMove::ParseException& e) {
+        std::cerr << "Command-line parsing error: " << e.what() << std::endl;
+        return 1;
+    }
+
+    // Load settings from the provided JSON file if it exists
+    FileMove::Settings settings;
+    if (!options.inputJsonPath.empty()) {
+        try {
+            settings = FileMove::StorageManager::loadSettings(options.inputJsonPath);
+        } catch (const std::exception& e) {
+            std::cerr << "Error loading settings: " << e.what() << std::endl;
+            return 1;
+        }
+    }
+
+    // Use the provided output log path if available, otherwise default
+    std::filesystem::path logPath = options.outputLogPath.empty() ? 
+                                    FileMove::StorageManager::getDefaultDataDirectory() / "FileMove.log" : 
+                                    options.outputLogPath;
+
+    FileMove::MoveWorker worker;
+    worker.Start();
+
+    if (!options.testFiles.empty()) {
+        std::cout << "Headless mode: Processing " << options.testFiles.size() << " files..." << std::endl;
+        
+        // Collect all raw entries first
+        std::vector<FileMove::PendingMoveEntry> rawEntries;
+        for (const auto& filePath : options.testFiles) {
+            if (!std::filesystem::exists(filePath)) {
+                std::cerr << "Warning: Test file does not exist: " << filePath << std::endl;
+                continue;
+            }
+
+            if (settings.groups.empty()) {
+                std::cerr << "Error: No groups defined in settings to move files into." << std::endl;
+                break;
+            }
+
+            const auto& targetGroup = settings.groups[0];
+            if (targetGroup.destinationPaths.empty()) {
+                std::cerr << "Error: Group '" << targetGroup.name << "' has no destinations." << std::endl;
+                continue;
+            }
+
+            FileMove::PendingMoveEntry entry;
+            entry.id = "test-" + std::to_string(std::chrono::system_clock::now().time_since_epoch().count());
+            entry.groupId = targetGroup.id;
+            entry.sourceFilePath = filePath;
+            entry.relativePath = filePath.filename();
+            entry.destinationDirectories = targetGroup.destinationPaths;
+            entry.debugTransferMode = options.debugMode == FileMove::DebugMode::MV ? FileMove::DebugMode::MV : 
+                                     (options.debugMode == FileMove::DebugMode::CP ? FileMove::DebugMode::CP : FileMove::DebugMode::None);
+            entry.queuedAt = "test-time";
+            entry.status = FileMove::MoveStatus::Queued;
+
+            rawEntries.push_back(entry);
+        }
+
+         // Now expand them (this handles directory expansion and sidecars)
+         auto preparedBatch = worker.PrepareBatch(rawEntries);
+         size_t targetCount = 0;
+         if (preparedBatch && !preparedBatch->empty()) {
+             targetCount = preparedBatch->size();
+             for (auto& entry : *preparedBatch) {
+                 entry.activeLogFilePath = logPath;
+             }
+             worker.QueueBatch(*preparedBatch);
+         } else if (!rawEntries.empty()) {
+              std::cerr << "Error: Preparation failed for the batch." << std::endl;
+              targetCount = rawEntries.size(); // Fallback to raw count to avoid infinite loop
+         }
+
+
+        // Wait for processing to complete or timeout (30s)
+        int attempts = 0;
+        while ((worker.GetQueuedCount() > 0 || worker.GetProcessedCount() < targetCount) && attempts < 60) {
+            std::this_thread::sleep_for(std::chrono::milliseconds(500));
+            attempts++;
+        }
+
+        if (attempts >= 60) {
+            std::cerr << "Timeout reached while waiting for worker." << std::endl;
+        } else {
+             std::cout << "Processing finished. Processed: " << worker.GetProcessedCount() << "/" << targetCount << std::endl;
+        }
+    } else {
+        std::cout << "No test files provided. Nothing to do in headless mode." << std::endl;
+    }
+
+    worker.Stop();
     return 0;
 }
 #endif

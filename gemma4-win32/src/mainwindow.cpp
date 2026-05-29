@@ -98,7 +98,7 @@ void MainWindow::InitializeControls() {
     m_hListView = CreateWindowExW(
         0, WC_LISTVIEW, L"",
         WS_CHILD | WS_VISIBLE | LVS_REPORT,
-        0, 0, 400, 400, m_hwnd, NULL, m_hInstance, NULL
+        0, 0, 400, 450, m_hwnd, NULL, m_hInstance, NULL
     );
 
     DragAcceptFiles(m_hListView, TRUE);
@@ -118,10 +118,10 @@ void MainWindow::InitializeControls() {
     SendMessage(m_hTooltip, TTM_ADDTOOL, 0, (LPARAM)&ti);
 
     m_hStatusLabelLeft = CreateWindowW(L"STATIC", L"Queued: 0", WS_CHILD | WS_VISIBLE,
-        10, 470, 150, 20, m_hwnd, NULL, m_hInstance, NULL);
+        10, 460, 150, 20, m_hwnd, NULL, m_hInstance, NULL);
 
     m_hStatusLabelRight = CreateWindowW(L"STATIC", L"Status: Idle", WS_CHILD | WS_VISIBLE,
-        230, 470, 150, 20, m_hwnd, NULL, m_hInstance, NULL);
+        230, 460, 150, 20, m_hwnd, NULL, m_hInstance, NULL);
 }
 #endif
 

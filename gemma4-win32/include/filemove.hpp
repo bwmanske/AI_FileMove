@@ -104,6 +104,7 @@ struct CommandLineOptions {
     std::filesystem::path outputLogPath;
     SortMode sortMode = SortMode::MostRecentlyUsed;
     PlacementMode placementMode = PlacementMode::UpperLeft;
+    std::vector<std::filesystem::path> testFiles; // Added for E2E testing in headless mode
 };
 
 class CommandLineParser {
